@@ -19,6 +19,7 @@ git init
 git remote add origin https://github.com/LeoBruant/i3-mountains.git
 git fetch --all
 git reset --hard origin/master
+config.sh
 
 # Copy config files
 sudo cp ~/projects/Arch-Boot/.gitconfig ~/.gitconfig
