@@ -22,7 +22,6 @@ git reset --hard origin/master
 
 # Copy config files
 sudo cp ~/projects/Arch-Boot/.gitconfig ~/.gitconfig
-sudo cp ~/projects/Arch-Boot/.zshrc ~/.zsh
 
 # Restart shell
 exec zsh
