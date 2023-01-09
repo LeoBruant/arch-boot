@@ -2,7 +2,7 @@
 sudo pacman -Syu --noconfirm
 
 # Install packages
-sudo pacman -S --noconfirm adapta-gtk-theme alacritty discord docker-compose feh firefox git lxappearance neovim papirus-icon-theme picom polybar ripgrep rofi thunar zsh
+sudo pacman -S --noconfirm adapta-gtk-theme alacritty discord docker-compose feh firefox lsd lxappearance neovim papirus-icon-theme picom polybar ripgrep rofi thunar zsh
 
 # Install yay
 cd ~ && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm && cd ~ && rm -rf yay
@@ -23,6 +23,10 @@ config.sh
 
 # Copy config files
 sudo cp ~/projects/Arch-Boot/.gitconfig ~/.gitconfig
+
+# Aliases
+alias ls=lsd
+alias update='sudo pacman -Syyu'
 
 # Restart shell
 exec zsh
