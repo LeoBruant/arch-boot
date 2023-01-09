@@ -22,7 +22,7 @@ git reset --hard origin/master
 sudo mkdir /usr/share/backgrounds
 sudo mkdir /usr/share/backgrounds/archlinux-login-backgrounds
 chmod +x config.sh
-config.sh
+sudo ./config.sh
 
 # Copy config files
 sudo cp ~/projects/Arch-Boot/.gitconfig ~/.gitconfig
