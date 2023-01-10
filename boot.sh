@@ -2,7 +2,7 @@
 sudo pacman -Syyu --noconfirm
 
 # Install packages
-sudo pacman -S --noconfirm adapta-gtk-theme alacritty discord docker docker-compose feh firefox lsd neofetch neovim picom polybar ripgrep rofi thunar zsh
+sudo pacman -S --noconfirm adapta-gtk-theme alacritty discord docker docker-compose feh firefox lsd neofetch neovim nvchad.git picom polybar ripgrep rofi thunar zsh
 
 # Install yay
 cd ~ && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm && cd ~ && rm -rf yay
