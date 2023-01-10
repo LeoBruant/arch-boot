@@ -1,5 +1,5 @@
 # Update
-sudo pacman -Syu --noconfirm
+sudo pacman -Syyu --noconfirm
 
 # Install packages
 sudo pacman -S --noconfirm adapta-gtk-theme alacritty discord docker-compose feh firefox lsd neofetch neovim picom polybar ripgrep rofi thunar zsh
