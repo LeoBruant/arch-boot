@@ -2,7 +2,7 @@
 sudo pacman -Syyu --noconfirm
 
 # Install packages
-sudo pacman -S --noconfirm adapta-gtk-theme alacritty discord docker-compose feh firefox lsd neofetch neovim picom polybar ripgrep rofi thunar zsh
+sudo pacman -S --noconfirm adapta-gtk-theme alacritty discord docker docker-compose feh firefox lsd neofetch neovim picom polybar ripgrep rofi thunar zsh
 
 # Install yay
 cd ~ && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm && cd ~ && rm -rf yay
@@ -11,9 +11,9 @@ cd ~ && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --n
 yay -S --noconfirm layan-cursor-theme-git networkmanager-dmenu-git papirus-folders-nordic slack-desktop ttf-meslo-nerd-font-powerlevel10k visual-studio-code-bin web-greeter wired zsh-theme-powerlevel10k-git
 
 # Enable docker
+sudo systemctl enable docker
 sudo usermod -aG docker $USER
 newgrp docker
-sudo systemctl enable docker
 
 # Copy config files
 sudo cp ~/projects/Arch-Boot/.gitconfig ~/.gitconfig
