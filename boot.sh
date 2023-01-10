@@ -13,6 +13,7 @@ yay -S --noconfirm layan-cursor-theme-git networkmanager-dmenu-git papirus-folde
 # Enable docker
 sudo systemctl enable docker
 sudo groupadd docker && sudo usermod -aG docker $USER
+newgrp docker
 
 # Copy config files
 sudo cp ~/projects/Arch-Boot/.gitconfig ~/.gitconfig
