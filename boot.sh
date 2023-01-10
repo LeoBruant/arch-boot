@@ -27,9 +27,5 @@ sudo ./config.sh
 # Copy config files
 sudo cp ~/projects/Arch-Boot/.gitconfig ~/.gitconfig
 
-# Aliases
-alias ls=lsd
-alias update='sudo pacman -Syyu'
-
 # Restart shell
 exec zsh
