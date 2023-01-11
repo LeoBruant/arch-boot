@@ -5,7 +5,7 @@ sudo pacman -Syyu --noconfirm
 sudo pacman -S --noconfirm adapta-gtk-theme alacritty discord docker docker-compose feh firefox lsd neofetch neovim nvchad.git picom polybar ripgrep rofi thunar zsh
 
 # Install yay
-cd ~ && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm && cd ~ && rm -rf yay
+git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm && cd .. && rm -rf yay
 
 # Install AUR packages
 yay -S --noconfirm layan-cursor-theme-git networkmanager-dmenu-git papirus-folders-nordic slack-desktop ttf-meslo-nerd-font-powerlevel10k visual-studio-code-bin web-greeter wired zsh-theme-powerlevel10k-git
@@ -19,6 +19,7 @@ newgrp docker
 sudo cp ~/projects/Arch-Boot/.gitconfig ~/.gitconfig
 
 # Get theme
+cd ~
 git init
 git remote add origin https://github.com/LeoBruant/i3-mountains.git
 git fetch --all && git reset --hard origin/master
