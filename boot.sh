@@ -2,13 +2,13 @@
 sudo pacman -Syyu --noconfirm
 
 # Install packages
-sudo pacman -S --noconfirm adapta-gtk-theme alacritty auto-cpufreq cron discord docker docker-compose dunst feh firefox lsd neofetch neovim picom polybar ripgrep rofi thunar zsh
+sudo pacman -S --noconfirm adapta-gtk-theme alacritty cron discord docker docker-compose dunst feh firefox lsd neofetch neovim picom polybar ripgrep rofi thunar zsh
 
 # Install yay
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm && cd .. && rm -rf yay
 
 # Install AUR packages
-yay -S --noconfirm autotiling layan-cursor-theme-git networkmanager-dmenu-git nvchad-git papirus-folders-nordic slack-desktop ttf-meslo-nerd-font-powerlevel10k visual-studio-code-bin web-greeter wired zsh-theme-powerlevel10k-git
+yay -S --noconfirm auto-cpufreq autotiling layan-cursor-theme-git networkmanager-dmenu-git nvchad-git papirus-icon-theme-stripped  slack-desktop ttf-meslo-nerd-font-powerlevel10k visual-studio-code-bin web-greeter zsh-theme-powerlevel10k-git
 
 # Enable docker
 sudo systemctl enable docker
