@@ -2,7 +2,7 @@
 sudo pacman -Syyu --noconfirm
 
 # Install packages
-sudo pacman -S --noconfirm adapta-gtk-theme alacritty cron discord docker docker-compose dunst feh firefox lsd neofetch neovim picom polybar ripgrep rofi thunar zsh
+sudo pacman -S --noconfirm adapta-gtk-theme alacritty discord docker docker-compose dunst feh firefox lsd neofetch neovim picom polybar ripgrep rofi thunar zsh
 
 # Install yay
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm && cd .. && rm -rf yay
@@ -19,12 +19,12 @@ newgrp docker
 sudo cp ~/projects/Arch-Boot/.gitconfig ~/.gitconfig
 
 # Get theme
-#cd ~
-#git init
-#git remote add origin https://github.com/LeoBruant/i3-mountains.git
-#git fetch --all && git reset --hard origin/master
-#sudo mkdir /usr/share/backgrounds && sudo mkdir /usr/share/backgrounds/archlinux-login-backgrounds
-#chmod +x scripts/config.sh && sudo ./scripts/config.sh
-#alacritty &
-#exit
+cd ~
+git init
+git remote add origin https://github.com/LeoBruant/i3-mountains.git
+git fetch --all && git reset --hard origin/master
+sudo mkdir /usr/share/backgrounds && sudo mkdir /usr/share/backgrounds/archlinux-login-backgrounds
+chmod +x scripts/config.sh && sudo ./scripts/config.sh
+alacritty &
+exit
 
