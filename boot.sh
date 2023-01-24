@@ -24,7 +24,8 @@ git init
 git remote add origin https://github.com/LeoBruant/i3-mountains.git
 git fetch --all && git reset --hard origin/master
 sudo mkdir /usr/share/backgrounds && sudo mkdir /usr/share/backgrounds/archlinux-login-backgrounds
-chmod +x scripts/config.sh && ./scripts/config.sh
+sudo mv ~/.config/lightdm.conf /etc/lightdm/lightdm.conf
+sudo mv ~/.config/lightdm.jpg /usr/share/backgrounds/archlinux-login-backgrounds/lightdm.jpg
 alacritty &
 exit
 
