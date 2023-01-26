@@ -10,18 +10,13 @@ git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm
 # Install AUR packages
 yay -S --noconfirm auto-cpufreq autotiling layan-cursor-theme-git networkmanager-dmenu-git nvchad-git papirus-icon-theme-stripped  slack-desktop ttf-meslo-nerd-font-powerlevel10k visual-studio-code-bin web-greeter zsh-theme-powerlevel10k-git
 
-# Enable docker
-sudo systemctl enable docker
-sudo usermod -aG docker $USER
-newgrp docker
-
 # Copy config files
-sudo cp ~/projects/Arch-Boot/.gitconfig ~/.gitconfig
+mv ~/projects/Arch-Boot/.gitconfig ~/.gitconfig
 
 # Get theme
-cd ~
+cd
 git init
-git remote add origin https://github.com/leobruant/arch-mountains.git
+git remote add origin https://github.com/leobruant/arch-mountains
 git fetch --all
 git reset --hard origin/master
 sudo mkdir /usr/share/backgrounds
@@ -29,5 +24,11 @@ sudo mkdir /usr/share/backgrounds/archlinux-login-backgrounds
 sudo mv ~/.config/lightdm.conf /etc/lightdm/lightdm.conf
 sudo mv ~/.config/lightdm.jpg /usr/share/backgrounds/archlinux-login-backgrounds/lightdm.jpg
 alacritty &
+
+# Enable docker
+sudo systemctl enable docker
+sudo usermod -aG docker $USER
+newgrp dockere
+
 exit
 
