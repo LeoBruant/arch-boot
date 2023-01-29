@@ -12,6 +12,7 @@ yay -S --noconfirm auto-cpufreq autotiling layan-cursor-theme-git networkmanager
 
 # Git config
 mv ~/projects/Arch-Boot/.gitconfig ~/.gitconfig
+mv ~/projects/Arch-Boot/.gitignore_global ~/.gitignore_global
 git config --global user.email "bruantleo@gmail.com"
 git config --global user.name "LeoBruant"
 
