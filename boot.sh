@@ -43,6 +43,6 @@ alacritty &
 # Enable docker
 sudo systemctl enable docker
 sudo usermod -aG docker $USER
-newgrp dockere
+newgrp docker
 
 exit
