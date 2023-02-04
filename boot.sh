@@ -2,7 +2,7 @@
 sudo pacman -Syyu --noconfirm
 
 # Install packages
-sudo pacman -S --noconfirm adapta-gtk-theme alacritty discord docker docker-compose dunst feh firefox flameshot lsd neofetch neovim picom polybar ripgrep rofi thunar zsh
+sudo pacman -S --noconfirm adapta-gtk-theme alacritty discord docker docker-compose dunst feh firefox flameshot lsd neofetch neovim picom polybar rofi thunar zsh
 
 # Install yay
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm && cd .. && rm -rf yay
@@ -29,6 +29,7 @@ gpg=$(gpg --list-secret-keys --keyid-format=long | grep "sec" | grep -o "/[A-Za-
 gpg --armor --export $gpg
 git config --global user.signingkey $gpg
 git config --global commit.gpgsign true
+echo $(gpg)
 
 # Get theme
 cd
@@ -40,7 +41,6 @@ sudo mkdir /usr/share/backgrounds
 sudo mkdir /usr/share/backgrounds/archlinux-login-backgrounds
 sudo mv ~/.config/lightdm.conf /etc/lightdm/lightdm.conf
 sudo mv ~/.config/lightdm.jpg /usr/share/backgrounds/archlinux-login-backgrounds/lightdm.jpg
-alacritty &
 
 # Enable docker
 sudo systemctl enable docker
