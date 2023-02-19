@@ -2,13 +2,13 @@
 sudo pacman -Syyu --noconfirm
 
 # Install packages
-sudo pacman -S --noconfirm alacritty discord docker docker-compose dunst feh firefox flameshot lsd neovim nitch picom polybar rofi thunar zsh
+sudo pacman -S --noconfirm alacritty ardour discord docker docker-compose dunst feh firefox flameshot lsd neovim nitch picom polybar rofi thunar zsh
 
 # Install yay
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm && cd .. && rm -rf yay
 
 # Install AUR packages
-yay -S --noconfirm auto-cpufreq autotiling catppuccin-gtk-theme-mocha layan-cursor-theme-git networkmanager-dmenu-git nvchad-git papirus-icon-theme-stripped slack-desktop ttf-meslo-nerd-font-powerlevel10k visual-studio-code-bin web-greeter zsh-theme-powerlevel10k-git
+yay -S --noconfirm auto-cpufreq autotiling catppuccin-gtk-theme-mocha layan-cursor-theme-git networkmanager-dmenu-git nv<chad-git papirus-icon-theme-stripped papirus-folders-catppuccin-git slack-desktop ttf-meslo-nerd-font-powerlevel10k visual-studio-code-bin web-greeter zsh-theme-powerlevel10k-git
 
 # Git config
 mv ~/projects/Arch-Boot/.gitconfig ~/.gitconfig
