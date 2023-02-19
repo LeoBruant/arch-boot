@@ -37,6 +37,9 @@ git init
 git remote add origin https://github.com/leobruant/arch-mountains
 git fetch --all
 git reset --hard origin/master
+# Folders
+papirus-folders -C cat-mocha-sapphire --theme Papirus-Dark
+# Lightdm background
 sudo mkdir /usr/share/backgrounds
 sudo mkdir /usr/share/backgrounds/archlinux-login-backgrounds
 sudo mv ~/.config/lightdm.conf /etc/lightdm/lightdm.conf
