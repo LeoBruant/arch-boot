@@ -28,7 +28,6 @@ gpg=$(gpg --list-secret-keys --keyid-format=long | grep "sec" | grep -o "/[A-Za-
 gpg --armor --export $gpg
 git config --global user.signingkey $gpg
 git config --global commit.gpgsign true
-echo $(gpg)
 
 # Get theme
 cd
