@@ -8,7 +8,7 @@ sudo pacman -S --noconfirm alacritty ardour discord docker docker-compose dunst 
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm && cd .. && rm -rf yay
 
 # Install AUR packages
-yay -S --noconfirm auto-cpufreq autotiling catppuccin-gtk-theme-mocha layan-cursor-theme-git networkmanager-dmenu-git nitch nvchad-git papirus-folders-catppuccin-git slack-desktop ttf-meslo-nerd-font-powerlevel10k visual-studio-code-bin web-greeter zsh-theme-powerlevel10k-git
+yay -S --noconfirm auto-cpufreq autotiling catppuccin-gtk-theme-mocha layan-cursor-theme-git networkmanager-dmenu-git nitch nvchad-git papirus-folders-catppuccin-git slack-desktop ttf-meslo-nerd-font-powerlevel10k visual-studio-code-bin web-greeter zsh-syntax-highlighting zsh-theme-powerlevel10k-git
 
 # Git config
 mv ~/projects/arch-boot/.gitignore_global ~/.gitignore_global
