@@ -41,11 +41,13 @@ papirus-folders -C cat-mocha-sapphire --theme Papirus-Dark
 sudo mkdir /usr/share/backgrounds
 sudo mkdir /usr/share/backgrounds/archlinux-login-backgrounds
 sudo mv ~/.config/lightdm.conf /etc/lightdm/lightdm.conf
-sudo mv ~/.config/wallpaper.png /usr/share/backgrounds/archlinux-login-backgrounds/wallpaper.png
+sudo cp ~/.config/wallpaper.png /usr/share/backgrounds/archlinux-login-backgrounds/wallpaper.png
 
 # Enable docker
 sudo systemctl enable docker
 sudo usermod -aG docker $USER
 newgrp docker
 
+# Zsh
+chsh -s /usr/bin/zsh
 exec zsh
