@@ -2,16 +2,13 @@
 sudo pacman -Syyu --noconfirm
 
 # Install packages
-sudo pacman -S --noconfirm alacritty ardour discord docker docker-compose firefox flameshot lsd neovim zsh
+sudo pacman -S --noconfirm alacritty ardour discord docker docker-compose firefox flameshot lsd neovim papirus-icon-theme zsh
 
 # Install yay
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm && cd .. && rm -rf yay
 
-# Remove i3lock
-sudo pacman -R --noconfirm i3lock
-
 # Install AUR packages
-yay -S --noconfirm auto-cpufreq betterlockscreen catppuccin-gtk-theme-mocha layan-cursor-theme-git networkmanager nitch papirus-folders-catppuccin-git slack-desktop ttf-meslo-nerd-font-powerlevel10k visual-studio-code-insiders-bin web-greeter 
+yay -S --noconfirm auto-cpufreq betterlockscreen catppuccin-gtk-theme-mocha gnome-shell-extension-blur-my-shell gnome-shell-extension-dash-to-dock gnome-shell-extension-pop-shell layan-cursor-theme-git networkmanager nitch papirus-folders-catppuccin-git slack-desktop ttf-meslo-nerd-font-powerlevel10k visual-studio-code-insiders-bin web-greeter 
 
 # Git config
 git config --global user.email "bruantleo@gmail.com"
@@ -45,8 +42,6 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 # Folders
 papirus-folders -C cat-mocha-sapphire --theme Papirus-Dark
 # Lightdm background
-sudo mkdir /usr/share/backgrounds
-sudo mkdir /usr/share/backgrounds/archlinux-login-backgrounds
 sudo cp ~/.config/lightdm.conf /etc/lightdm/lightdm.conf
 sudo cp ~/.config/wallpaper.jpg /usr/share/backgrounds/archlinux-login-backgrounds/wallpaper.jpg
 # Betterlockscreen background
