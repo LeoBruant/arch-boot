@@ -2,7 +2,7 @@
 sudo pacman -Syyu --noconfirm
 
 # Install packages
-sudo pacman -S --noconfirm alacritty ardour discord docker docker-compose firefox flameshot lsd neovim papirus-icon-theme zsh
+sudo pacman -S --noconfirm alacritty discord docker docker-compose firefox flameshot lsd neovim papirus-icon-theme zsh
 
 # Install yay
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm && cd .. && rm -rf yay
@@ -30,6 +30,9 @@ git config --global commit.gpgsign true
 # Switch display manager
 sudo systemctl disable gdm
 sudo systemctl enable lightdm
+
+# Get extensions settings
+sudo mv /extensions /usr/share/gnome-shell/extensions
 
 # Get theme
 cd
