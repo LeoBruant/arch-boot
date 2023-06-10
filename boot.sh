@@ -2,7 +2,7 @@
 sudo pacman -Syyu --noconfirm
 
 # Install packages
-sudo pacman -S --noconfirm alacritty ardour discord docker docker-compose dunst feh firefox flameshot lsd neovim papirus-icon-theme picom polybar rofi thunar zsh
+sudo pacman -S --noconfirm alacritty ardour discord docker docker-compose firefox flameshot lsd neovim zsh
 
 # Install yay
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm && cd .. && rm -rf yay
@@ -11,7 +11,7 @@ git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm
 sudo pacman -R --noconfirm i3lock
 
 # Install AUR packages
-yay -S --noconfirm auto-cpufreq autotiling betterlockscreen catppuccin-gtk-theme-mocha layan-cursor-theme-git networkmanager-dmenu-git nitch papirus-folders-catppuccin-git slack-desktop ttf-meslo-nerd-font-powerlevel10k visual-studio-code-insiders-bin web-greeter 
+yay -S --noconfirm auto-cpufreq betterlockscreen catppuccin-gtk-theme-mocha layan-cursor-theme-git networkmanager nitch papirus-folders-catppuccin-git slack-desktop ttf-meslo-nerd-font-powerlevel10k visual-studio-code-insiders-bin web-greeter 
 
 # Git config
 git config --global user.email "bruantleo@gmail.com"
@@ -30,12 +30,16 @@ gpg --armor --export $gpg
 git config --global user.signingkey $gpg
 git config --global commit.gpgsign true
 
+# Switch display manager
+sudo systemctl disable gdm
+sudo systemctl enable lightdm
+
 # Get theme
 cd
 git init
 git remote add origin https://github.com/leobruant/arch-catppuccin
 git fetch --all
-git reset --hard origin/master
+git reset --hard origin/gnome
 git submodule update --init --recursive
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 # Folders
