@@ -2,7 +2,7 @@
 sudo pacman -Syyu --noconfirm
 
 # Install packages
-sudo pacman -S --noconfirm alacritty ardour discord docker docker-compose dunst feh firefox flameshot lsd neovim papirus-icon-theme picom polybar rofi thunar zsh
+sudo pacman -S --noconfirm alacritty ardour discord docker docker-compose dunst feh firefox flameshot lsd neovim papirus-icon-theme picom polybar rofi thunar ttf-fira-code zsh
 
 # Install yay
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm && cd .. && rm -rf yay
