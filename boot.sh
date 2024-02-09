@@ -2,13 +2,13 @@
 sudo pacman -Syyu --noconfirm
 
 # Install packages
-sudo pacman -S --noconfirm alacritty discord docker docker-compose flameshot lsd neovim opera papirus-icon-theme ttf-fira-code zsh
+sudo pacman -S --noconfirm alacritty docker docker-compose firefox flameshot lsd neovim opera papirus-icon-theme ttf-fira-code zsh
 
 # Install yay
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm && cd .. && rm -rf yay
 
 # Install AUR packages
-yay -S --noconfirm auto-cpufreq betterlockscreen catppuccin-gtk-theme-mocha gnome-shell-extension-blur-my-shell gnome-shell-extension-dash-to-dock gnome-shell-extension-pop-shell layan-cursor-theme-git networkmanager nitch papirus-folders-catppuccin-git slack-desktop ttf-meslo-nerd-font-powerlevel10k visual-studio-code-insiders-bin web-greeter 
+yay -S --noconfirm auto-cpufreq catppuccin-gtk-theme-mocha gnome-shell-extension-blur-my-shell gnome-shell-extension-dash-to-dock gnome-shell-extension-pop-shell layan-cursor-theme-git networkmanager nitch papirus-folders-catppuccin-git slack-desktop ttf-meslo-nerd-font-powerlevel10k visual-studio-code-insiders-bin vesktop-bin
 
 # Git config
 git config --global user.email "bruantleo@gmail.com"
@@ -27,10 +27,6 @@ gpg --armor --export $gpg
 git config --global user.signingkey $gpg
 git config --global commit.gpgsign true
 
-# Switch display manager
-sudo systemctl disable gdm
-sudo systemctl enable lightdm
-
 # Get extensions settings
 sudo mv /extensions /usr/share/gnome-shell/extensions
 
@@ -44,11 +40,6 @@ git submodule update --init --recursive
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 # Folders
 papirus-folders -C cat-mocha-sapphire --theme Papirus-Dark
-# Lightdm background
-sudo cp ~/.config/lightdm.conf /etc/lightdm/lightdm.conf
-sudo cp ~/.config/wallpaper.jpg /usr/share/backgrounds/archlinux-login-backgrounds/wallpaper.jpg
-# Betterlockscreen background
-betterlockscreen -u ~/.config/wallpaper.jpg
 
 # Zsh
 chsh -s /usr/bin/zsh
