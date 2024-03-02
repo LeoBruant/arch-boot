@@ -2,30 +2,30 @@
 sudo pacman -Syyu --noconfirm
 
 # Install packages
-sudo pacman -S --noconfirm alacritty ardour docker docker-compose firefox flameshot gimp gnome-boxes lsd neovim opera papirus-icon-theme qbittorrent scrcpy steam-native-runtime ttf-fira-code zsh
+sudo pacman -S --noconfirm alacritty ardour croc docker docker-compose firefox flameshot gimp gnome-boxes lsd neovim papirus-icon-theme qbittorrent scrcpy steam-native-runtime ttf-fira-code zsh
 
 # Install yay
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm && cd .. && rm -rf yay
 
 # Install AUR packages
-yay -S --noconfirm auto-cpufreq balena-etcher catppuccin-gtk-theme-mocha gnome-shell-extension-blur-my-shell gnome-shell-extension-dash-to-dock gnome-shell-extension-pop-shell layan-cursor-theme-git networkmanager nitch papirus-folders-catppuccin-git pinokio-bin slack-desktop ttf-meslo-nerd-font-powerlevel10k visual-studio-code-insiders-bin vesktop-bin
+yay -S --noconfirm auto-cpufreq balena-etcher catppuccin-gtk-theme-mocha gnome-shell-extension-blur-my-shell gnome-shell-extension-dash-to-dock gnome-shell-extension-pop-shell layan-cursor-theme-git networkmanager nitch opera opera-ffmpeg-codecs papirus-folders-catppuccin-git pinokio-bin r2modman-bin slack-desktop ttf-meslo-nerd-font-powerlevel10k visual-studio-code-insiders-bin vesktop-bin
 
 # Git config
 git config --global user.email "bruantleo@gmail.com"
 git config --global user.name "LeoBruant"
 
 # SSH key
-# ssh-keygen -t ed25519 -C "bruantleo@gmail.com"
-# eval "$(ssh-agent -s)"
-# ssh-add ~/.ssh/id_ed25519
-# cat ~/.ssh/id_ed25519.pub
+ssh-keygen -t ed25519 -C "bruantleo@gmail.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+cat ~/.ssh/id_ed25519.pub
 
-# GPG key
-# gpg --full-generate-key
-# gpg=$(gpg --list-secret-keys --keyid-format=long | grep "sec" | grep -o "/[A-Za-z0-9]*" | grep -o "[A-Za-z0-9]*")
-# gpg --armor --export $gpg
-# git config --global user.signingkey $gpg
-# git config --global commit.gpgsign true
+#GPG key
+gpg --full-generate-key
+gpg=$(gpg --list-secret-keys --keyid-format=long | grep "sec" | grep -o "/[A-Za-z0-9]*" | grep -o "[A-Za-z0-9]*")
+gpg --armor --export $gpg
+git config --global user.signingkey $gpg
+git config --global commit.gpgsign true
 
 # Get extensions settings
 sudo mv /extensions /usr/share/gnome-shell/extensions
