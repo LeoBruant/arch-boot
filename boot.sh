@@ -11,6 +11,7 @@ git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm
 yay -S --noconfirm auto-cpufreq balena-etcher catppuccin-gtk-theme-mocha gnome-shell-extension-blur-my-shell gnome-shell-extension-dash-to-dock gnome-shell-extension-pop-shell layan-cursor-theme-git networkmanager nitch opera opera-ffmpeg-codecs papirus-folders-catppuccin-git pinokio-bin r2modman-bin slack-desktop ttf-meslo-nerd-font-powerlevel10k visual-studio-code-insiders-bin vesktop-bin
 
 # Git config
+git config --global core.editor "nvim"
 git config --global user.email "bruantleo@gmail.com"
 git config --global user.name "LeoBruant"
 
@@ -20,7 +21,7 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 cat ~/.ssh/id_ed25519.pub
 
-#GPG key
+# GPG key
 gpg --full-generate-key
 gpg=$(gpg --list-secret-keys --keyid-format=long | grep "sec" | grep -o "/[A-Za-z0-9]*" | grep -o "[A-Za-z0-9]*")
 gpg --armor --export $gpg
