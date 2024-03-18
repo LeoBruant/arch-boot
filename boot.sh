@@ -12,6 +12,7 @@ yay -S --noconfirm auto-cpufreq balena-etcher catppuccin-gtk-theme-mocha gnome-s
 
 # Git config
 git config --global core.editor "nvim"
+git config --global push.autoSetupRemote true
 git config --global user.email "bruantleo@gmail.com"
 git config --global user.name "LeoBruant"
 
