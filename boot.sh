@@ -10,16 +10,16 @@ sudo pacman -S --noconfirm \
     flameshot \
     gimp \
     gnome-boxes \
-    kitty \
     less \
     lsd \
     nautilus \
     neovim \
-    papirus-icon-theme \
     python-pip \
     sddm \
     steam \
     ttf-fira-code \
+    zsh \
+    zsh-synthax-highlighting
 
 # Install yay
 git clone https://aur.archlinux.org/yay.git
@@ -31,31 +31,36 @@ yay -S --noconfirm \
     auto-cpufreq \
     balena-etcher \
     catppuccin-gtk-theme-mocha \
+    ghostty \
     layan-cursor-theme-git \
     nitch \
+    oh-my-zsh-git \
     opera \
-    opera-ffmpeg-codecs \
+    opera-ffmpeg-codecs-bin \
     papirus-folders-catppuccin-git \
     r2modman-bin \
     slack-desktop \
     ttf-meslo-nerd-font-powerlevel10k \
     vesktop-bin \
-    visual-studio-code-insiders-bin
+    visual-studio-code-insiders-bin \
+    zsh-theme-powerlevel10k-git
 
-# Get theme
+# Get dotfiles
 cd ~
 git init
-git remote add origin https://github.com/leobruant/arch-catppuccin
+git remote add origin https://github.com/leobruant/dotfiles
 git fetch --all
 git reset --hard origin/kde
-git submodule update --init --recursive
-git clone --depth=1 \
-    https://github.com/romkatv/powerlevel10k.git \
-    ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+# Set folders colors
 papirus-folders -C cat-mocha-sapphire --theme Papirus-Dark
 
 # Zsh
 chsh -s /usr/bin/zsh
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# Enable auto-cpufreq
+sudo systemctl enable --now auto-cpufreq
 
 # Enable docker
 sudo systemctl enable docker
