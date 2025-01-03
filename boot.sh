@@ -14,12 +14,10 @@ sudo pacman -S --noconfirm \
     lsd \
     nautilus \
     neovim \
-    python-pip \
     sddm \
     steam \
     ttf-fira-code \
-    zsh \
-    zsh-synthax-highlighting
+    zsh
 
 # Install yay
 git clone https://aur.archlinux.org/yay.git
@@ -34,7 +32,6 @@ yay -S --noconfirm \
     ghostty \
     layan-cursor-theme-git \
     nitch \
-    oh-my-zsh-git \
     opera \
     opera-ffmpeg-codecs-bin \
     papirus-folders-catppuccin-git \
@@ -42,8 +39,7 @@ yay -S --noconfirm \
     slack-desktop \
     ttf-meslo-nerd-font-powerlevel10k \
     vesktop-bin \
-    visual-studio-code-insiders-bin \
-    zsh-theme-powerlevel10k-git
+    visual-studio-code-insiders-bin
 
 # Get dotfiles
 cd ~
@@ -57,6 +53,7 @@ papirus-folders -C cat-mocha-sapphire --theme Papirus-Dark
 
 # Zsh
 chsh -s /usr/bin/zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # Enable auto-cpufreq
