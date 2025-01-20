@@ -10,6 +10,7 @@ sudo pacman -S --noconfirm \
     flameshot \
     gimp \
     gnome-boxes \
+    kvantum \
     less \
     lsd \
     nautilus \
@@ -17,6 +18,7 @@ sudo pacman -S --noconfirm \
     sddm \
     steam \
     ttf-fira-code \
+    unzip \
     zsh
 
 # Install yay
@@ -54,6 +56,7 @@ papirus-folders -C cat-mocha-sapphire --theme Papirus-Dark
 # Zsh
 chsh -s /usr/bin/zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # Enable auto-cpufreq
