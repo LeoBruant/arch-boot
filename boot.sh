@@ -50,6 +50,10 @@ git remote add origin https://github.com/leobruant/dotfiles
 git fetch --all
 git reset --hard origin/kde
 
+# Get catppuccin-kde
+git clone --depth=1 https://github.com/catppuccin/kde catppuccin-kde && cd catppuccin-kde
+./install.sh
+
 # Set folders colors
 papirus-folders -C cat-mocha-sapphire --theme Papirus-Dark
 
